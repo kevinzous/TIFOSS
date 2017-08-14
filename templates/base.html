@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>{% block title %}TIFOSS{% endblock %}</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../static/bootstrap/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="../static/bootstrap/css/freelancer.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../static/bootstrap/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body id="page-top" class="index">
+<div id="skipnav"><a href="#maincontent">Skip to main content</a></div>
+
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            {% block nav %}
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="#page-top">TIFOSS</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav ">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown">TIFOSS 2017
+                        <span class="caret"></span></a>
+
+                        <ul class="dropdown-menu">
+                        <li><a href="#">Planning</a></li>
+                        <li><a href="#">Partenariats</a></li>
+                        <li><a href="#">Le mot du directeur</a></li>
+                        <li><a href="#">Teaser</a></li>
+                        </ul></li>
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown">Informations
+                        <span class="caret"></span></a>
+
+                        <ul class="dropdown-menu">
+                        <li><a href="#">Comment s'y rendre</a></li>
+                        <li><a href="/informations/reglement">Règlement</a></li>
+                        <li><a href="/informations/contacts">Contacts</a></li>
+                        <li><a href="/informations/tarifs">Tarifs</a></li>
+                        </ul></li>
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown">Soirée et Activités
+                        <span class="caret"></span></a>
+
+                        <ul class="dropdown-menu">
+                        <li><a href="/informations/soiree">Soirée</a></li>
+                        <li><a href="nformations/activites">Activités</a></li>
+                        </ul></li>
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown">Editions précédentes
+                        <span class="caret"></span></a>
+
+                        <ul class="dropdown-menu">
+                        <li><a href="#">Galerie Photos</a></li>
+                        <li><a href="#">Palmarès</a></li>
+                        </ul></li>
+
+
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+              <li><a href="/participer/inscription"><span class="glyphicon glyphicon-user"></span> Participer</a></li>
+                </ul>
+
+
+            </div>
+            <!-- /.navbar-collapse -->
+            {% endblock %}
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Header -->
+    
+
+    {% block content %}
+    {% endblock%}
+
+    
+    <!-- jQuery -->
+    <script src="../static/bootstrap/vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../static/bootstrap/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="../static/bootstrap/js/jqBootstrapValidation.js"></script>
+    <script src="../static/bootstrap/js/contact_me.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="../static/bootstrap/js/freelancer.min.js"></script>
+
+</body>
+
+</html>

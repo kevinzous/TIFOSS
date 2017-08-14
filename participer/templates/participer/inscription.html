@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<meta charset="utf-8"/>
+
+{% if success %}
+	<h1>Bonjour {{prenom}} ! </h1>
+	<p>Ton compte a bien été crée, tu peux maintenant t'inscrire toi et ton équipe.</p>
+	ident={{identifiant}}
+	<p><a href="{% url 'compteUtilisateur' user.id %}">
+		Accéder à mon compte
+		</a>
+	</p>
+
+{% else %}
+
+<form action=""{% url "inscription" %}"" method="post">
+
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <input type="submit" value="Submit" />
+
+</form>
+
+{% endif %}

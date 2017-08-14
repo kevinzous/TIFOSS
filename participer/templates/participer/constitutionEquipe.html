@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<meta charset="utf-8"/>
+
+
+
+{% if success1 %}
+	<h1><strong>Votre équipe</strong></h1>
+ 	<p>Nom de l'équipe: {{nomEquipe}}</p>
+	<p>Ecole: {{nomEcole}}</p>
+	<p><strong>Etat de l'inscription: </strong>{{etatEquipe}}</p>
+	<ul><strong>Liste des joueurs de l'équipe</strong>
+		{% for joueur in joueurs %}
+			<li> Joueur: {{joueur.nom}} {{joueur.prenom}}    Taille: {{joueur.taille}}   sexe: {{joueur.sexe}}    forfait: {{joueur.forfait}}
+			{% if joueur.paye %}
+				<strong>Paiement</strong>: Validé
+			{% else %}
+				<strong>Paiement</strong>: En attente
+			{% endif %}
+			<a href="{% url 'modifierJoueur' joueur.id %}"><strong>  Modifier</strong></a></li>
+		{% endfor %}
+	</ul>
+	<p><a href="{% url 'ajouterJoueur' user.id %}">Ajouter un joueur</a></p>
+	<p><a href="{% url 'deconnexion' %}">Deconnexion</a></p>
+
+{% else %}
+
+<form action=""{% url 'accesCompte' user.id %}"" method="post">
+
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <input type="submit" value="submit" />
+
+</form>
+
+{% endif %}

@@ -1,0 +1,21 @@
+{% extends "informations/base.html" %}
+
+{% load static %}
+
+{% block header %}
+<h2>Bienvenue !</h2>
+    <p>Le site officiel du TIFOSS: Tournoi International de Foot en Salle de Supélec</p>
+    <p><strong>Les equipes inscrites:</strong></p>
+    {% for equipe in equipes %}
+    	<li>{{equipe.ecole}} : {{equipe.nom}}</li>
+    {% endfor %}
+ {% endblock %}
+
+{% block content %}
+   {# <img src="{% static 'informations/imageTifoss.jpg' %}" alt="Mon image" /> #}
+
+{% endblock %}
+
+
+
+ 

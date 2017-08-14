@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<meta charset="utf-8"/>
+
+
+
+{% if succes %}
+	<h1><strong>Votre équipe</strong></h1>
+	<p>Nom de l'équipe: {{nomEquipe}}</p>
+	<p>Ecole: {{nomEcole}}</p>
+	<ul><strong>Liste des joueurs de l'équipe</strong>
+		{% for joueur in joueurs %}
+			<li>Joueur: {{joueur.nom}} {{joueur.prenom}}    Taille: {{joueur.taille}}   sexe: {{joueur.sexe}}    forfait: {{joueur.forfait}}<a href="{% url 'modifierJoueur' joueur.id %}"><strong>Modifier</strong></a></li>
+		{% endfor %}
+	</ul>
+	<p><a href="{% url 'ajouterJoueur' user.id %}">Ajouter un joueur</a></p>
+{% else %}
+
+<form action=""{% url 'compteUtilisateur' user.id %}"" method="post">
+
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <input type="submit" value="Submit" />
+
+</form>
+
+{% endif %}
+
+	

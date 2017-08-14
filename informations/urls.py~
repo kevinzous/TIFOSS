@@ -1,0 +1,20 @@
+from django.conf.urls import url
+from django.contrib import admin
+from django.views.generic import TemplateView
+
+
+
+urlpatterns=[
+    
+    url(r'^reglement',TemplateView.as_view(template_name='informations/reglement.html')),
+    url(r'^tarifs',TemplateView.as_view(template_name='informations/tarifs.html')),
+    url(r'^contacts',TemplateView.as_view(template_name='informations/contacts.html')),
+    url(r'^soiree',TemplateView.as_view(template_name='informations/soiree.html')),
+    url(r'^activites',TemplateView.as_view(template_name='informations/activites.html')),
+    url(r'^participer', TemplateView.as_view(template_name='informations/participer.html')),
+    url(r'',TemplateView.as_view(template_name='informations/pageAccueil.html')),
+
+    
+    
+    ]
+        

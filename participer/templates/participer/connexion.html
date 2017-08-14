@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<meta charset="utf-8"/>
+
+{% if success %}
+	{% if error %}
+
+	<h1>Vous n'avez pas encore de compte utilisateur?</h1>
+	<p><a href="{% url 'inscription' %}"> Inscrivez-vous</a></p>
+	<p><a href="{% url 'connexion' %}">Reessayez</a></p>
+
+	{% endif %}
+	{% if user.is_authenticated %}
+	<h1>Bonjour {{user.username}} !</h1>
+	<p><a href="{% url 'accesCompte' user.id %}">
+		Accéder à mon compte
+		</a>
+	</p>
+
+	{% endif %}
+
+{% else %}
+
+<form action=""{% url "connexion" %}"" method="post">
+
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <input type="submit" value="Se connecter" />
+
+</form>
+
+{% endif %}
