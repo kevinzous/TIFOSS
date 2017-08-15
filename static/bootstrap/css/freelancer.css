@@ -109,6 +109,10 @@ header .intro-text .skills {
   font-weight: 700;
   border: none;
 }
+#menuliste {
+color: black;
+}
+
 .navbar-custom .navbar-brand {
   color: white;
 }
