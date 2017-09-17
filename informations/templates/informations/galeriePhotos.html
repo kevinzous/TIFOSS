@@ -2,3 +2,68 @@
 {% load static %}
 
 {% block title%} Galerie Photos {% endblock %}
+
+{% block header %} 
+<h1> <i class="fa fa-picture-o"></i> Galerie Photos </h1>
+<a href="https://www.facebook.com/tifoss2014/" class="btn btn-lg btn-outline"> 
+Pour plus de photos, consulter notre page facebook : <i class="fa fa-facebook-square"> </i></a> 
+
+{% endblock %}
+
+{% block content %}
+
+<div class="container">   
+    <div class="row">
+        <div class="col-xs-3">
+            <a href="{% static 'informations/imageTifoss.jpg' %}" class="thumbnail">
+                <img src="{% static 'informations/imageTifoss.jpg' %}" alt="Image 1" />
+            </a>
+        </div>
+        
+        <div class="col-xs-3">
+            <a href="{% static 'informations/galeriePhotos/Tifoss 169a.jpg' %}" class="thumbnail">
+                <img src="{% static 'informations/galeriePhotos/Tifoss 169a.jpg' %}" alt="Image Tifoss 169a" />
+            </a>
+        </div>
+        
+        <div class="col-xs-3">
+            <a href="{% static 'informations/galeriePhotos/Tifoss 169.jpg' %}" class="thumbnail">
+                <img src="{% static 'informations/galeriePhotos/Tifoss 169.jpg' %}" alt="Image Tifoss 169" />
+            </a>
+        </div>
+        
+        <div class="col-xs-3">
+            <a href="{% static 'informations/galeriePhotos/Tifoss 168.jpg' %}" class="thumbnail">
+                <img src="{% static 'informations/galeriePhotos/Tifoss 168.jpg' %}" alt="Image Tifoss 168" />
+            </a>
+        </div>
+    </div>
+	<div class="row">
+        <div class="col-xs-3">
+            <a href="{% static 'informations/imageTifoss.jpg' %}" class="thumbnail">
+                <img src="{% static 'informations/imageTifoss.jpg' %}" alt="Image 1" />
+            </a>
+        </div>
+        
+        <div class="col-xs-3">
+            <a href="{% static 'informations/galeriePhotos/Tifoss 169a.jpg' %}" class="thumbnail">
+                <img src="{% static 'informations/galeriePhotos/Tifoss 169a.jpg' %}" alt="Image Tifoss 169a" />
+            </a>
+        </div>
+        
+        <div class="col-xs-3">
+            <a href="{% static 'informations/galeriePhotos/Tifoss 169.jpg' %}" class="thumbnail">
+                <img src="{% static 'informations/galeriePhotos/Tifoss 169.jpg' %}" alt="Image Tifoss 169" />
+            </a>
+        </div>
+        
+        <div class="col-xs-3">
+            <a href="{% static 'informations/galeriePhotos/Tifoss 168.jpg' %}" class="thumbnail">
+                <img src="{% static 'informations/galeriePhotos/Tifoss 168.jpg' %}" alt="Image Tifoss 168" />
+            </a>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

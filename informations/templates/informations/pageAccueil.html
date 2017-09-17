@@ -4,7 +4,9 @@
 
 {% block header %}
 <h2>Bienvenue !</h2>
-    <p>Le site officiel du TIFOSS: Tournoi International de Foot en Salle de Supélec</p>
+	<h3>Site officiel du TIF<i class="fa fa-futbol-o fa-spin fa" aria-hidden="true"></i>SS <br/> </h3> <p> <i>Tournoi International de Foot en Salle de Supélec </i> </p>
+   	<br/> <br/>
+
     <p><strong>Les equipes inscrites:</strong></p>
     {% for equipe in equipes %}
     	<li>{{equipe.ecole}} : {{equipe.nom}}</li>
