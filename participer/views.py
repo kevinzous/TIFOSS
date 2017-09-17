@@ -71,9 +71,6 @@ def inscription(request):
         success=True
         user = User.objects.create_user(nom,email,password)
         login(request, user)
-#        user.username=nom
-#        user.email=email
-#        user.password=password
         user.save()
         identifiant=user.id
         user.save()    

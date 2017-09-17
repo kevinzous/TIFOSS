@@ -1,5 +1,6 @@
 from django import forms
 from .models import joueur
+from django.contrib.auth.models import User
 
 class connexionForm(forms.Form):
     username = forms.CharField(label="Nom d'utilisateur", max_length=30)
@@ -8,11 +9,19 @@ class connexionForm(forms.Form):
 
     
 class inscriptionForm(forms.Form):
-    nom=forms.CharField(label='Votre nom',max_length=30)
-    prenom=forms.CharField(label='Votre prenom',max_length=30)
-    email=forms.EmailField(label='Votre Mail')
-#    tel
+    nom=forms.CharField(label="Nom d'utilisateur",max_length=30)
+    prenom=forms.CharField(label='Ton prenom',max_length=30)
+    email=forms.EmailField(label='Mail')
     password = forms.CharField(label="Mot de passe", widget=forms.PasswordInput)
+
+    def clean_nom(self):
+        name=self.cleaned_data['nom']
+        ListeUser=User.objects.filter(username=name)
+        x=ListeUser.count()
+        if x != 0:
+            raise forms.ValidationError("Nom d'utilisateur deja utilise")
+        return name
+        
 
 class compteUtilisateurForm(forms.Form):
     nomEquipe=forms.CharField(label="Nom de l'equipe", max_length=50)
