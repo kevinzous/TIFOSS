@@ -8,11 +8,13 @@
     <p><strong>Les equipes inscrites:</strong></p>
     {% for equipe in equipes %}
     	<li>{{equipe.ecole}} : {{equipe.nom}}</li>
-    {% endfor %}
- {% endblock %}
+	{% endfor %}
 
+	
+ {% endblock %} 
 {% block content %}
-   {# <img src="{% static 'informations/imageTifoss.jpg' %}" alt="Mon image" /> #}
+   
+ <img src="{% static 'informations/imageTifoss.jpg' %}" class="img-responsive" alt="Mon image" />
 
 {% endblock %}
 

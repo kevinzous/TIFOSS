@@ -1,4 +1,45 @@
 {% extends "informations/base.html" %}
-
 {% load static %}
+
 {% block title%}Contacts{% endblock %}
+
+
+{% block header %}
+<h1> Contacts d'urgence </h1>
+{% endblock %} 
+
+
+{% block content %}
+<br />
+<div class="container">
+<div class="table-responsive col-md-12">
+  <table class="table table-hover table-bordered ">
+  	<thead> 
+  		<tr>
+  			<th class="text-center">Nom </th>
+  			<th class="text-center">Numéro/Mail </th>
+  		</tr>
+  	</thead>
+  	<tbody>
+  		<tr>
+  			<td class="text-center"> Jules Brunel </td>
+  			<td class="text-center"> 06 18 08 31 72 </td>
+  		</tr>
+  		<tr>
+  			<td class="text-center"> Théo Ouadguiri</td>
+  			<td class="text-center"> 06 37 32 74 85</td>
+  		</tr>
+  		<tr>
+  			<td class="text-center"> BDS</td>
+  			<td class="text-center"> bds.csmetz@gmail.com </td>
+  		</tr>
+  	</tbody>
+  </table>
+</div> 
+</div>
+
+
+
+{% endblock %}
+
+

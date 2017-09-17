@@ -2138,7 +2138,7 @@
 }
 .fa-signing:before,
 .fa-sign-language:before {
-  content: "\f2a7";
+  content: "\f2a7"; 
 }
 .fa-low-vision:before {
   content: "\f2a8";
