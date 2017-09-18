@@ -99,18 +99,18 @@ def ajouterJoueur(request, id_equipe):
     form=joueurForm(request.POST or None)
     success1=False
     if form.is_valid():
-        hebergement=form.cleaned_data['hebergement']
-        repasSamedi=form.cleaned_data['repasSamedi']
-        repasDimanche=form.cleaned_data['repasDimanche']
-        soiree=form.cleaned_data['soiree']
-        forfaitJ=forfait(hebergement=hebergement, repasSamedi=repasSamedi, repasDimanche=repasDimanche, soiree=soiree)
+        hebergement=form.cleaned_data['hébérgement']
+        repas_Samedi=form.cleaned_data['repas_Samedi']
+        repas_Dimanche=form.cleaned_data['repas_Dimanche']
+        soirée=form.cleaned_data['soirée']
+        forfaitJ=forfait(hebergement=hébérgement, repasSamedi=repas_Samedi, repasDimanche=repas_Dimanche, soiree=soirée)
         forfaitJ.save()
         nom=form.cleaned_data['nom']
-        prenom=form.cleaned_data['prenom']
+        prénom=form.cleaned_data['prénom']
         taille=form.cleaned_data['taille']
         sexe=form.cleaned_data['sexe']
         
-        joueur2=joueur(nom=nom,prenom=prenom,taille=taille, forfait=forfaitJ, sexe=sexe,team=equipe.objects.get(identifiant=id_equipe),paye=False)
+        joueur2=joueur(nom=nom,prenom=prénom,taille=taille, forfait=forfaitJ, sexe=sexe,team=equipe.objects.get(identifiant=id_equipe),paye=False)
         
         equipe2=equipe.objects.get(identifiant=id_equipe)
         nomEquipe=equipe2.nom
@@ -145,18 +145,18 @@ def modifierJoueur(request,id_joueur):
         equipe1=J.team       
         J.delete()
         
-        hebergement=form.cleaned_data['hebergement']#On recupere les infos du formulaire et on cree un nouveau forfait
-        repasSamedi=form.cleaned_data['repasSamedi']
-        repasDimanche=form.cleaned_data['repasDimanche']
-        soiree=form.cleaned_data['soiree']
+        hebergement=form.cleaned_data['hébérgement']#On recupere les infos du formulaire et on cree un nouveau forfait
+        repasSamedi=form.cleaned_data['repas_Samedi']
+        repasDimanche=form.cleaned_data['repas_Dimanche']
+        soiree=form.cleaned_data['soirée']
         forfaitJ=forfait(hebergement=hebergement, repasSamedi=repasSamedi, repasDimanche=repasDimanche, soiree=soiree)
         forfaitJ.save()
         nom=form.cleaned_data['nom']
-        prenom=form.cleaned_data['prenom']
+        prenom=form.cleaned_data['prénom']
         taille=form.cleaned_data['taille']
         sexe=form.cleaned_data['sexe']
         
-        joueur2=joueur(nom=nom,prenom=prenom,taille=taille, forfait=forfaitJ, sexe=sexe,team=equipe1,paye=False)
+        joueur2=joueur(nom=nom,prenom=prénom,taille=taille, forfait=forfaitJ, sexe=sexe,team=equipe1,paye=False)
                                                                           
         nomEquipe=equipe1.nom
         nomEcole=equipe1.ecole
