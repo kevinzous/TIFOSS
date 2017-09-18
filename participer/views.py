@@ -103,7 +103,7 @@ def ajouterJoueur(request, id_equipe):
         repas_Samedi=form.cleaned_data['repas_Samedi']
         repas_Dimanche=form.cleaned_data['repas_Dimanche']
         soirée=form.cleaned_data['soirée']
-        forfaitJ=forfait(hebergement=hébérgement, repasSamedi=repas_Samedi, repasDimanche=repas_Dimanche, soiree=soirée)
+        forfaitJ=forfait(hebergement=hebergement, repasSamedi=repas_Samedi, repasDimanche=repas_Dimanche, soiree=soirée)
         forfaitJ.save()
         nom=form.cleaned_data['nom']
         prénom=form.cleaned_data['prénom']
@@ -156,7 +156,7 @@ def modifierJoueur(request,id_joueur):
         taille=form.cleaned_data['taille']
         sexe=form.cleaned_data['sexe']
         
-        joueur2=joueur(nom=nom,prenom=prénom,taille=taille, forfait=forfaitJ, sexe=sexe,team=equipe1,paye=False)
+        joueur2=joueur(nom=nom,prenom=prenom,taille=taille, forfait=forfaitJ, sexe=sexe,team=equipe1,paye=False)
                                                                           
         nomEquipe=equipe1.nom
         nomEcole=equipe1.ecole
