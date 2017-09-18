@@ -3,3 +3,4 @@ __pycache__/
 TIFOSS/settings_secret.py
 *.*~
 #*.*#
+static/
