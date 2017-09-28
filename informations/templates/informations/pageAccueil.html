@@ -3,19 +3,17 @@
 {% load static %}
 
 {% block header %}
+
 <h2>Bienvenue !</h2>
-	<h3>Site officiel du TIF<i class="fa fa-futbol-o fa-spin fa" aria-hidden="true"></i>SS <br/> </h3> <p> <i>Tournoi International de Foot en Salle de Supélec </i> </p>
-   	<br/> <br/>
-
-    <h3> Les 9 et 10 Décemebre 2017</h3>
-    <p><strong>Les equipes inscrites:</strong></p>
-    {% for equipe in equipes %}
-    	<li>{{equipe.ecole}} : {{equipe.nom}}</li>
-	{% endfor %}
-
-	
+	<h3>Site officiel du TIF<i class="fa fa-futbol-o fa-spin fa" aria-hidden="true"></i>SS <br/> </h3> <p> Tournoi International de Foot en Salle de Supélec </p>
+   	<br/> 
+    <h3> Les 9 et 10 Décemebre 2017 <br/> </h3> 
+    <p>Pour les équipe <strong>féminines </strong>
+et <strong> masculines</strong>, inscrivez-vous avant le 10 Novembre! </p>
  {% endblock %} 
+
 {% block content %}
+
 <div class="container">
  <div id="myCarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
@@ -44,9 +42,8 @@
     <div class="item">
       <img src="{% static 'informations/galeriePhotos/Tifoss 140.jpg' %}"  alt="Tifoss">
       <div class="carousel-caption">
-        <h3>TIFOSS</h3>
+         <h3>TIFOSS</h3>
       </div>
-    </div>
     </div>
 
   <!-- Left and right controls -->
@@ -60,6 +57,35 @@
   </a>
 </div>
 </div>
+
+<br/>
+<p>
+Chaque année depuis maintenant 31 ans, le Bureau des Sports de Supélec (BDS) organise le Tournoi International de Foot en Salle de Supélec (TIFOSS).Cet événement rassemble à chaque édition une trentaine d’équipes d‘étudiantes et d'étudiants venus de la France entière et de l’Europe. 
+</p>
+<br/>
+<p><strong>Les équipes inscrites</strong></p>
+
+<div class="table-responsive col-md-12">
+  <table class="table table-hover table-bordered ">
+    <thead> 
+      <tr>
+        <th class="text-center">École</th>
+        <th class="text-center">Équipe </th>
+      </tr>
+    </thead>
+    <tbody>
+     {% for equipe in equipes %}
+      <tr>
+        <td class="text-center"> {{equipe.ecole}}  </td>
+        <td class="text-center"> {{equipe.nom}}</td>
+      </tr>
+        {% endfor %}
+    </tbody>
+  </table>
+</div> 
+</div>
+
+
 {% endblock %}
 
 
