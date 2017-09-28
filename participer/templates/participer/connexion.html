@@ -8,6 +8,19 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+    <style>
+    div.centre {
+    position:absolute;
+    left: 50%;
+    top: 50%;
+    width: 200px;
+    height: 200px;
+    margin-left: -100px; /* Cette valeur doit être la moitié négative de la valeur du width */
+    margin-top: -100px; /* Cette valeur doit être la moitié négative de la valeur du height */
+    }
+    </style>
+
+
     <title>Connexion</title>
 	<!-- Bootstrap Core CSS -->
     <link href="../../../static/bootstrap/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -46,16 +59,15 @@
 	{% endif %}
 
 {% else %}
-
-<form action=""{% url "connexion" %}"" method="post">
-
-    {% csrf_token %}
-
-    {{ form.as_p }}
-
-    <input type="submit" value="Se connecter" />
-
-</form>
+<div class="centre">
+    <div class="col-lg-12">
+        <form action=""{% url "connexion" %}"" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Se connecter" class="btn btn-success btn-lg"/>
+        </form>
+        </div>
+        </div>
 
 {% endif %}
 <!-- jQuery -->

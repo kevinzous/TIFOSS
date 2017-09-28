@@ -9,6 +9,17 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+    <style>
+    div.centre {
+    position:absolute;
+    left: 50%;
+    top: 10%;
+    width: 200px;
+    height: 200px;
+    margin-left: -100px; /* Cette valeur doit être la moitié négative de la valeur du width */
+    }
+    </style>
+
     <title>Participer</title>
 	<!-- Bootstrap Core CSS -->
     <link href="../../../static/bootstrap/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -65,16 +76,14 @@
 	</ul>
 	<p><a href="{% url 'ajouterJoueur' user.id %}" class="btn btn-success btn-lg"><i class="fa fa-user-plus"></i> Ajouter un joueur</a></p>
 {% else %}
-
+<div class="centre">
 <form action=""{% url 'compteUtilisateur' user.id %}"" method="post">
 
     {% csrf_token %}
-
     {{ form.as_p }}
-
-    <input type="submit" value="Submit" />
-
+    <input type="submit" value="Soumettre" class="btn btn-success btn-lg"/>
 </form>
+</div>
 
 {% endif %}
 	<!-- jQuery -->
