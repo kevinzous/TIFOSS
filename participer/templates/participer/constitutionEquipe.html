@@ -38,17 +38,39 @@
 	<p>Ecole: {{nomEcole}}</p>
 	<p><strong>Etat de l'inscription: </strong>{{etatEquipe}}</p>
 	<ul><strong>Liste des joueurs de l'équipe</strong>
-		{% for joueur in joueurs %}
-			<li> Joueur: {{joueur.nom}} {{joueur.prenom}}    Taille: {{joueur.taille}}   sexe: {{joueur.sexe}}    forfait: {{joueur.forfait}}
-			{% if joueur.paye %}
-				<strong>Paiement</strong>: Validé
-			{% else %}
-				<strong>Paiement</strong>: En attente
-			{% endif %}
-			<a href="{% url 'modifierJoueur' joueur.id %}"><strong>  Modifier</strong></a></li>
-		{% endfor %}
-	</ul>
-	<p><a href=""{% url "ajouterJoueur" user.id %}"" class="btn btn-success btn-lg"><i class="fa fa-user-plus"></i> Ajouter un joueur</a></p>
+    <div class="table-responsive col-md-12">
+        <table class="table table-hover table-bordered ">
+            <thead> 
+                <tr>
+                    <th class="text-center">Joueur</th>
+                    <th class="text-center">Taille</th>
+                    <th class="text-center">Sexe</th>
+                    <th class="text-center">Forfait</th>
+                    <th class="text-center">Etat du Paiement</th>
+                    <th class="text-center">        </th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for joueur in joueurs %}
+                <tr>
+                    <td class="text-center"> {{joueur.nom}} {{joueur.prenom}} </td>
+                    <td class="text-center"> {{joueur.taille}}</td>
+                    <th class="text-center"> {{joueur.sexe}}</th>
+                    <th class="text-center">{{joueur.forfait}}</th>
+                    <th class="text-center">
+                    {% if joueur.paye %}
+                        <strong>Paiement</strong>: Validé
+                    {% else %}
+                        <strong>Paiement</strong>: En attente
+                    {% endif %}
+                    </th>
+                    <th class="text-center"><a href="{% url 'modifierJoueur' joueur.id %}"><strong>Modifier</strong></a></th>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div> 
+	<p><a href="{% url 'ajouterJoueur' user.id %}"" class="btn btn-success btn-lg"><i class="fa fa-user-plus"></i> Ajouter un joueur</a></p>
 	<p><a href="{% url 'deconnexion' %}">Deconnexion</a></p>
 
 {% else %}

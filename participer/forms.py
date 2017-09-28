@@ -29,12 +29,13 @@ class compteUtilisateurForm(forms.Form):
 
            
 class joueurForm(forms.ModelForm):
-    hébérgement=forms.BooleanField(required=False)
-    repas_Samedi=forms.BooleanField(required=False)
-    repas_Dimanche=forms.BooleanField(required=False)
-    soirée=forms.BooleanField(required=False)
-    nom=forms.CharField(max_length=50)
-    prénom=forms.CharField(max_length=50)
+    Nom=forms.CharField(max_length=50)
+    Prénom=forms.CharField(max_length=50)
+    Ecole=forms.CharField(max_length=50)
+    Hébérgement=forms.BooleanField(required=False)
+    Repas=forms.BooleanField(required=False)
+    Soirée=forms.BooleanField(required=False)
+
 #    SIZE_SHIRTS=(('S','taille S'),('M','taille M'),('L','taille L'),('XL','taille XL'))
 #    SEXE=(('M','Masculin'),('F','Feminin'))
     class Meta:

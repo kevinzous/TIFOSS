@@ -20,27 +20,23 @@ class joueur(models.Model):
 
 class forfait(models.Model):
     hebergement=models.BooleanField()
-    repasSamedi=models.BooleanField()
-    repasDimanche=models.BooleanField()
+    repas=models.BooleanField()
     soiree=models.BooleanField()    
     l=''
-    somme=25
+    somme=10
     
         
     def __str__(self):
         if self.hebergement:
-            self.l+=' hebergement+'
-            self.somme+=3
-        if self.repasSamedi:
-            self.l+=' repas du samedi +'
-            self.somme+=2
-        if self.repasDimanche:
-            self.l+=' repas du dimanche +'
-            self.somme+=2
-        if self.soiree:
-            self.l+=' Soiree'
+            self.l+=' Hebergement/'
             self.somme+=5
-        return 'tournoi +{0}     Somme a payer: {1}'.format(self.l,self.somme)
+        if self.repas:
+            self.l+='Repas/'
+            self.somme+=5
+        if self.soiree:
+            self.l+='Soiree'
+            self.somme+=5
+        return 'Tournoi/{0}  ->   Somme à payer: {1}€'.format(self.l,self.somme)
         
         
         

@@ -52,7 +52,7 @@ def accesCompte(request, id_u):
          etatEquipe='Equipe inscrite'
          equipe2.paye=True
      else:
-         etatEquipe="L'equipe doit contenir au moins 5 joueurs dont le paiement a ete valide par l'organisation pour etre definitivement inscrite au tournoi"
+         etatEquipe="L'équipe doit contenir au moins 5 joueurs dont le paiement a été validé par l'organisation pour être définitivement inscrite au tournoi"
          equipe2.paye=False
          
      success1=True
@@ -99,18 +99,17 @@ def ajouterJoueur(request, id_equipe):
     form=joueurForm(request.POST or None)
     success1=False
     if form.is_valid():
-        hebergement=form.cleaned_data['hébérgement']
-        repas_Samedi=form.cleaned_data['repas_Samedi']
-        repas_Dimanche=form.cleaned_data['repas_Dimanche']
-        soirée=form.cleaned_data['soirée']
-        forfaitJ=forfait(hebergement=hebergement, repasSamedi=repas_Samedi, repasDimanche=repas_Dimanche, soiree=soirée)
+        hebergement=form.cleaned_data['Hébérgement']
+        repas=form.cleaned_data['Repas']
+        soirée=form.cleaned_data['Soirée']
+        forfaitJ=forfait(hebergement=hebergement,repas=repas,soiree=soirée)
         forfaitJ.save()
-        nom=form.cleaned_data['nom']
-        prénom=form.cleaned_data['prénom']
+        nom=form.cleaned_data['Nom']
+        prénom=form.cleaned_data['Prénom']
         taille=form.cleaned_data['taille']
         sexe=form.cleaned_data['sexe']
-        
-        joueur2=joueur(nom=nom,prenom=prénom,taille=taille, forfait=forfaitJ, sexe=sexe,team=equipe.objects.get(identifiant=id_equipe),paye=False)
+        ecole=form.cleaned_data['Ecole']
+        joueur2=joueur(nom=nom,prenom=prénom,taille=taille, forfait=forfaitJ, sexe=sexe,team=equipe.objects.get(identifiant=id_equipe),ecole=ecole,paye=False)
         
         equipe2=equipe.objects.get(identifiant=id_equipe)
         nomEquipe=equipe2.nom
@@ -129,7 +128,7 @@ def ajouterJoueur(request, id_equipe):
             etatEquipe='Equipe inscrite'
             equipe2.paye=True
         else:
-            etatEquipe="L'equipe doit contenir au moins 5 joueurs dont le paiement a ete valide par l'organisation pour etre definitivement inscrite au tournoi"
+            etatEquipe="L'équipe doit contenir au moins 5 joueurs dont le paiement a été validé par l'organisation pour etre définitivement inscrite au tournoi"
             equipe2.paye=False
          
         success1=True
@@ -145,18 +144,18 @@ def modifierJoueur(request,id_joueur):
         equipe1=J.team       
         J.delete()
         
-        hebergement=form.cleaned_data['hébérgement']#On recupere les infos du formulaire et on cree un nouveau forfait
-        repasSamedi=form.cleaned_data['repas_Samedi']
-        repasDimanche=form.cleaned_data['repas_Dimanche']
-        soiree=form.cleaned_data['soirée']
-        forfaitJ=forfait(hebergement=hebergement, repasSamedi=repasSamedi, repasDimanche=repasDimanche, soiree=soiree)
+        hebergement=form.cleaned_data['Hébérgement']#On recupere les infos du formulaire et on cree un nouveau forfait
+        repas=form.cleaned_data['Repas']
+        soiree=form.cleaned_data['Soirée']
+        forfaitJ=forfait(hebergement=hebergement, repas=repas,soiree=soiree)
         forfaitJ.save()
-        nom=form.cleaned_data['nom']
-        prenom=form.cleaned_data['prénom']
+        nom=form.cleaned_data['Nom']
+        prenom=form.cleaned_data['Prénom']
         taille=form.cleaned_data['taille']
         sexe=form.cleaned_data['sexe']
+        ecole=form.cleaned_data['Ecole']
         
-        joueur2=joueur(nom=nom,prenom=prenom,taille=taille, forfait=forfaitJ, sexe=sexe,team=equipe1,paye=False)
+        joueur2=joueur(nom=nom,prenom=prenom,taille=taille, forfait=forfaitJ, sexe=sexe,team=equipe1,ecole=ecole,paye=False)
                                                                           
         nomEquipe=equipe1.nom
         nomEcole=equipe1.ecole
@@ -173,7 +172,7 @@ def modifierJoueur(request,id_joueur):
             etatEquipe='Equipe inscrite'
             equipe1.paye=True
         else:
-            etatEquipe="L'equipe doit contenir au moins 5 joueurs dont le paiement a ete valide par l'organisation pour etre definitivement inscrite au tournoi"
+            etatEquipe="L'équipe doit contenir au moins 5 joueurs dont le paiement a été validé par l'organisation pour être définitivement inscrite au tournoi"
             equipe1.paye=False
          
         id_equipe=equipe1.identifiant
