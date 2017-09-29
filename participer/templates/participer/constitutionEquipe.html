@@ -33,6 +33,7 @@
 
 
 {% if success1 %}
+<div class="container">
 	<h1><strong>Votre équipe</strong></h1>
  	<p>Nom de l'équipe: {{nomEquipe}}</p>
 	<p>Ecole: {{nomEcole}}</p>
@@ -72,7 +73,8 @@
     </div> 
 	<p><a href="{% url 'ajouterJoueur' user.id %}"" class="btn btn-success btn-lg"><i class="fa fa-user-plus"></i> Ajouter un joueur</a></p>
 	<p><a href="{% url 'deconnexion' %}">Deconnexion</a></p>
-
+    <p> Une fois les informations des joueurs saisis, le BDS se tournera vers vous pour la partie paiement</p>
+</div>
 {% else %}
 
 <form action=""{% url 'accesCompte' user.id %}"" method="post">

@@ -35,7 +35,7 @@ class forfait(models.Model):
             self.somme+=5
         if self.soiree:
             self.l+='Soiree'
-            self.somme+=5
+            self.somme+=3
         return 'Tournoi/{0}  ->   Somme à payer: {1}€'.format(self.l,self.somme)
         
         
