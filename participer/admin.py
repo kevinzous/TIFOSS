@@ -14,7 +14,7 @@ class joueurAdmin(admin.ModelAdmin):
 
 class equipeAdmin(admin.ModelAdmin):
 
-   list_display   = ('nom','ecole','paye','afficher_joueurs')
+   list_display   = ('nom','ecole','paye')
 
    list_filter    = ('ecole','nom','paye')
 
