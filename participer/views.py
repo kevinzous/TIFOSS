@@ -9,7 +9,7 @@ from django.http import HttpResponse
 # -*- coding: utf-8 -*-
 
 def accueil(request):
-    equipes=equipe.objects.filter(paye=True)
+    equipes=equipe.objects.filter(inscrit=True)
     equipes=list(equipes)
 
     return render(request, 'informations/pageAccueil.html',locals())
@@ -119,6 +119,9 @@ def ajouterJoueur(request, id_equipe):
         
         joueurs=joueur.objects.filter(team=equipe2)
         joueurs=list(joueurs)
+        N=length(joueurs)
+        if N>=5:
+            equipe2.inscrit=True
         n=0
         for J in joueurs:
             if J.paye==True:

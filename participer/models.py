@@ -47,6 +47,7 @@ class equipe(models.Model):
     joueurs=models.ManyToManyField('joueur')
     identifiant=models.IntegerField()
     paye=models.BooleanField()
+    inscrit=models.BooleanField()
 
     def __str__(self):
         return self.nom
