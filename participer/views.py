@@ -119,7 +119,7 @@ def ajouterJoueur(request, id_equipe):
         
         joueurs=joueur.objects.filter(team=equipe2)
         joueurs=list(joueurs)
-        N=length(joueurs)
+        N=len(joueurs)
         if N>=5:
             equipe2.inscrit=True
         n=0
