@@ -38,67 +38,63 @@
             <!-- Brand and toggle get grouped for better mobile display -->
             {% block nav %}
             <div class="navbar-header page-scroll">
+
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigationbar">
-                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                    <span class="sr-only">Toggle navigation</span> TIFOSS 2017 <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="/">TIFOSS</a>
-            </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="navigationbar" >
+                    <ul class="nav navbar-nav ">
+                        <li class="hidden">
+                            <a href="#page-top"></a>
+                        </li>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="navigationbar" >
-                <ul class="nav navbar-nav ">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" href="#" aria-haspopup="true" data-toggle="dropdown">TIFOSS 2017
+                            <span class="caret"></span></a>
 
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown">TIFOSS 2017
-                        <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                            <li><a href="/informations/planning" id="menuliste">Planning</a></li>
+                            <li><a href="/informations/partenariats" id="menuliste">Partenariats</a></li>
+                            <li><a href="/informations/leMotDuDirecteur" id="menuliste">Le mot du directeur</a></li>
+                            <li><a href="/informations/teaser" id="menuliste">Teaser</a></li>
+                            </ul></li>
 
-                        <ul class="dropdown-menu">
-                        <li><a href="/informations/planning" id="menuliste">Planning</a></li>
-                        <li><a href="/informations/partenariats" id="menuliste">Partenariats</a></li>
-                        <li><a href="/informations/leMotDuDirecteur" id="menuliste">Le mot du directeur</a></li>
-                        <li><a href="/informations/teaser" id="menuliste">Teaser</a></li>
-                        </ul></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown">Informations
+                            <span class="caret"></span></a>
 
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown">Informations
-                        <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                            <li><a href="/informations/commentSYRendre" id="menuliste">Comment s'y rendre</a></li>
+                            <li><a href="/informations/reglement" id="menuliste">Règlement</a></li>
+                            <li><a href="/informations/contacts" id="menuliste">Contacts</a></li>
+                            <li><a href="/informations/tarifs" id="menuliste">Tarifs</a></li>
+                            </ul></li>
 
-                        <ul class="dropdown-menu">
-                        <li><a href="/informations/commentSYRendre" id="menuliste">Comment s'y rendre</a></li>
-                        <li><a href="/informations/reglement" id="menuliste">Règlement</a></li>
-                        <li><a href="/informations/contacts" id="menuliste">Contacts</a></li>
-                        <li><a href="/informations/tarifs" id="menuliste">Tarifs</a></li>
-                        </ul></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown">Soirée et Activités
+                            <span class="caret"></span></a>
 
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown">Soirée et Activités
-                        <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                            <li><a href="/informations/soiree" id="menuliste">Soirée</a></li>
+                            <li><a href="/informations/activites" id="menuliste">Activités</a></li>
+                            </ul></li>
 
-                        <ul class="dropdown-menu">
-                        <li><a href="/informations/soiree" id="menuliste">Soirée</a></li>
-                        <li><a href="/informations/activites" id="menuliste">Activités</a></li>
-                        </ul></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown">Editions précédentes
+                            <span class="caret"></span></a>
 
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown">Editions précédentes
-                        <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                            <li><a href="/informations/galeriePhotos" id="menuliste">Galerie Photos</a></li>
+                            <li><a href="/informations/palmares" id="menuliste">Palmarès</a></li>
+                            </ul></li>
+                        <li class="dropdown">
+                            <a href="/informations/participer/"><span class="glyphicon glyphicon-user"></span> Participer</a>
+                            </li>
+                    </ul>
+                </div>
 
-                        <ul class="dropdown-menu">
-                        <li><a href="/informations/galeriePhotos" id="menuliste">Galerie Photos</a></li>
-                        <li><a href="/informations/palmares" id="menuliste">Palmarès</a></li>
-                        </ul></li>
-
-
-                </ul>
-
-                <ul class="nav navbar-nav navbar-right">
-              <li><a href="/informations/participer/"><span class="glyphicon glyphicon-user"></span> Participer</a></li>
-                </ul>
-
-
+                
             </div>
             <!-- /.navbar-collapse -->
             {% endblock %}
