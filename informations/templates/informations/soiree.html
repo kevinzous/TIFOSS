@@ -8,16 +8,26 @@
 
 {% block header %} 
 <h1> <i class="fa fa-music"></i>Soirée </h1>
+<a href="https://www.facebook.com/events/146895712622052/" class="btn btn-lg btn-outline"> 
+Rejoignez l'événement Facebook, pour obtenir plus d'informations : <i class="fa fa-facebook-square"> </i></a>
+
 {% endblock %}
- 
 {% block content%}
-<div class="container">
-<p>
+<div class="container text-center">
+        <br>
+        <p>Une <b> lourde soirée </b> impliquant les écoles du Technopole est en cours de préparation.<br>
+        Tarif spécial de 3€ pour les participants du tournoi, sinon 4€ en préventes ou 5€ sur place.
+        </p>
+        <div class="span12">
+            <a href="https://www.facebook.com/events/146895712622052/" class="thumbnail">
+                <img class="centered" src="{% static 'informations/tifoss_soiree.jpg' %}" width="400" alt="affiche" />
+            </a> 
+        </div>
 
-Une <b> lourde soirée </b> impliquant les écoles du Technopole est en cours de préparation. <br/> <br/>
-
-
-
-</h2>
+        <p>
+        <b>Adresse</b> : Résidence ALOES, 4 Place Édouard Branly, 57070 METZ
+        
+        </p>
 </div>
+ 
 {% endblock %}
