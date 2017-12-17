@@ -1,0 +1,42 @@
+{% extends "informations/base.html" %}
+{% load static %}
+
+{% block title%} Résultats{% endblock %}
+
+{% block header %} 
+<h1> Résultats édition 2017 <i class="fa fa-trophy" aria-hidden="true"></i> </h1>
+{% endblock %}
+
+{% block content%}
+<div class="container">
+<h2> Masculin</h2>
+<h3> Phase finale</h3>
+<div class="col-sm-12">
+            <a href="{% static 'informations/resultats2017/phasefinale.PNG' %}" class="thumbnail">
+                <img src="{% static 'informations/resultats2017/phasefinale.PNG' %}" alt="finales" />
+            </a>
+</div>
+<h3> Phase de poule</h3>
+<div class="col-sm-12">
+            <a href="{% static 'informations/resultats2017/poule1et2.jpg' %}" class="thumbnail">
+                <img src="{% static 'informations/resultats2017/poule1et2.jpg' %}" alt="poule" />
+            </a>
+</div>
+<div class="col-sm-12">
+            <a href="{% static 'informations/resultats2017/poule3et4.jpg' %}" class="thumbnail">
+                <img src="{% static 'informations/resultats2017/poule3et4.jpg' %}" alt="poule" />
+            </a>
+</div>
+
+
+<h2> Féminin</h2>
+<h3> Détails bientot disponibles</h3>
+	<h3>
+Podium féminin:</h3> <p><i class="fa fa-trophy" style="color:#FFD700" aria-hidden="true"></i> ENSEM Nancy <br>
+    <i class="fa fa-trophy" style="color:#CECECE" aria-hidden="true"></i> Mines Alès <br>
+    <i class="fa fa-trophy" style="color:#614E1A" aria-hidden="true"></i> Supélec<br>
+    </p>
+
+</div>
+
+{% endblock %}

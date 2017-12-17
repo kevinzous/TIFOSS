@@ -8,7 +8,7 @@ urlpatterns=[
     
     url(r'^planning',TemplateView.as_view(template_name='informations/planning.html')),
     url(r'^partenariats',TemplateView.as_view(template_name='informations/partenariats.html')),
-    url(r'^leMotDuDirecteur',TemplateView.as_view(template_name='informations/leMotDuDirecteur.html')),
+    url(r'^resultats',TemplateView.as_view(template_name='informations/resultats.html')),
     url(r'^teaser',TemplateView.as_view(template_name='informations/teaser.html')),
     
     url(r'^commentSYRendre',TemplateView.as_view(template_name='informations/commentSYRendre.html')),
